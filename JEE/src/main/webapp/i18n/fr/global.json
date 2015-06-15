@@ -13,6 +13,7 @@
                 "parc": "Parc",
                 "activite": "Activite",
 >>>>>>> a5feabac8f722228a130d6b97b7d3cde31d12cbf
+                "note": "Note",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "activite",
+            "relationshipNameCapitalized": "Activite",
+            "relationshipFieldName": "activite",
+            "otherEntityName": "activite",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Activite",
+            "otherEntityField": "nom_activite"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "keyAPI",
+            "fieldType": "String",
+            "fieldNameCapitalized": "KeyAPI",
+            "fieldNameUnderscored": "key_api",
+            "fieldInJavaBeanMethod": "KeyAPI",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "note",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Note",
+            "fieldNameUnderscored": "note",
+            "fieldInJavaBeanMethod": "Note",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "commentaire_note",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Commentaire_note",
+            "fieldNameUnderscored": "commentaire_note",
+            "fieldInJavaBeanMethod": "Commentaire_note",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615101519",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}

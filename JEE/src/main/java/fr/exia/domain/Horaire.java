@@ -34,7 +34,7 @@ public class Horaire implements Serializable {
     @Column(name = "date_debut")
     private LocalDate date_debut;
 
-    @ManyToMany(mappedBy = "nom_activites")
+    @ManyToMany(mappedBy = "nom_activite")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Activite> activites = new HashSet<>();

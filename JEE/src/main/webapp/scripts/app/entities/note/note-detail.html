@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="puydufouApp.note.detail.title">Note</span> {{note.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.note.keyAPI">KeyAPI</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{note.keyAPI}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.note.note">Note</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{note.note}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.note.commentaire_note">Commentaire_note</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{note.commentaire_note}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.note.activite">activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{note.activite.nom_activite}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="note"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

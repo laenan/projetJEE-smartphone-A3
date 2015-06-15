@@ -1,0 +1,22 @@
+{
+    "puydufouApp": {
+        "note" : {
+            "home": {
+                "title": "Notes",
+                "createLabel": "Créer un nouveau Note",
+                "createOrEditLabel": "Créer ou éditer un Note"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Note {{ id }} ?"
+            },
+            "detail": {
+                "title": "Note"
+            },
+            "keyAPI": "KeyAPI",
+            "note": "Note",
+            "commentaire_note": "Commentaire_note",
+            "activite": "activite"
+        }
+    }
+}
+
