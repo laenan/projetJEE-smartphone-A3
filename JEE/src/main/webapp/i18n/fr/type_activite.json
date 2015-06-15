@@ -1,0 +1,20 @@
+{
+    "puydufouApp": {
+        "type_activite" : {
+            "home": {
+                "title": "Type_activites",
+                "createLabel": "Créer un nouveau Type_activite",
+                "createOrEditLabel": "Créer ou éditer un Type_activite"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type_activite {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type_activite"
+            },
+            "nom_type": "Nom_type",
+            "activite": "activite"
+        }
+    }
+}
+

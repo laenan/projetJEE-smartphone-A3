@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "activite",
+            "relationshipNameCapitalized": "Activite",
+            "relationshipFieldName": "activite",
+            "otherEntityName": "activite",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Activite",
+            "otherEntityRelationshipName": "type_activite"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nom_type",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nom_type",
+            "fieldNameUnderscored": "nom_type",
+            "fieldInJavaBeanMethod": "Nom_type",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615081836",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}
