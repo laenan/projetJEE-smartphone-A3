@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql"/>
+    <property name="autoIncrement" value="false" dbms="oracle"/>
+    <!--
+        Added the entity Activite.
+    -->
+    <changeSet id="20150615092720" author="jhipster">
+        <createTable tableName="ACTIVITE">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}" >
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nom_activite" type="varchar(255)"/>
+            <column name="description_activite" type="varchar(255)"/>
+            <column name="duree_activite" type="integer"/>
+            <column name="photo_activite" type="varchar(255)"/>
+            <column name="date_creation" type="date"/>
+            <column name="nb_acteurs" type="integer"/>
+            <column name="evt_historique" type="varchar(255)"/>
+            <column name="position" type="integer"/>
+            <column name="parc_id" type="bigint"/>
+            <column name="type_activite_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="parc_id"
+                                 baseTableName="ACTIVITE"
+                                 constraintName="fk_activite_parc_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="PARC"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_activite_id"
+                                 baseTableName="ACTIVITE"
+                                 constraintName="fk_activite_type_activite_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="TYPE_ACTIVITE"/>
+
+        <createTable tableName="ACTIVITE_HORAIRE">
+            <column name="horaires_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activites_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="activites_id, horaires_id" tableName="ACTIVITE_HORAIRE"/>
+
+        <addForeignKeyConstraint baseColumnNames="activites_id"
+                                 baseTableName="ACTIVITE_HORAIRE"
+                                 constraintName="fk_activite_horaire_horaire_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ACTIVITE"/>
+
+        <addForeignKeyConstraint baseColumnNames="horaires_id"
+                                 baseTableName="ACTIVITE_HORAIRE"
+                                 constraintName="fk_horaire_horaire_activite_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="HORAIRE"/>
+        
+    </changeSet>
+</databaseChangeLog>

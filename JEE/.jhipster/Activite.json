@@ -1,0 +1,141 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "parc",
+            "relationshipNameCapitalized": "Parc",
+            "relationshipFieldName": "parc",
+            "otherEntityName": "parc",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Parc",
+            "otherEntityField": "nom_parc"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "note",
+            "relationshipNameCapitalized": "Note",
+            "relationshipFieldName": "note",
+            "otherEntityName": "note",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Note",
+            "otherEntityRelationshipName": "activite"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "type_activite",
+            "relationshipNameCapitalized": "Type_activite",
+            "relationshipFieldName": "type_activite",
+            "otherEntityName": "type_activite",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Type_activite",
+            "otherEntityField": "nom_type"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "horaire",
+            "relationshipNameCapitalized": "Horaire",
+            "relationshipFieldName": "horaire",
+            "otherEntityName": "horaire",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Horaire",
+            "otherEntityField": "date_debut",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "menu_Restaurant",
+            "relationshipNameCapitalized": "Menu_Restaurant",
+            "relationshipFieldName": "menu_Restaurant",
+            "otherEntityName": "menu_Restaurant",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Menu_Restaurant",
+            "otherEntityRelationshipName": "activite"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nom_activite",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nom_activite",
+            "fieldNameUnderscored": "nom_activite",
+            "fieldInJavaBeanMethod": "Nom_activite",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description_activite",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description_activite",
+            "fieldNameUnderscored": "description_activite",
+            "fieldInJavaBeanMethod": "Description_activite",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "duree_activite",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Duree_activite",
+            "fieldNameUnderscored": "duree_activite",
+            "fieldInJavaBeanMethod": "Duree_activite",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "photo_activite",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Photo_activite",
+            "fieldNameUnderscored": "photo_activite",
+            "fieldInJavaBeanMethod": "Photo_activite",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "date_creation",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "Date_creation",
+            "fieldNameUnderscored": "date_creation",
+            "fieldInJavaBeanMethod": "Date_creation",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "nb_acteurs",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Nb_acteurs",
+            "fieldNameUnderscored": "nb_acteurs",
+            "fieldInJavaBeanMethod": "Nb_acteurs",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "evt_historique",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Evt_historique",
+            "fieldNameUnderscored": "evt_historique",
+            "fieldInJavaBeanMethod": "Evt_historique",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "position",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Position",
+            "fieldNameUnderscored": "position",
+            "fieldInJavaBeanMethod": "Position",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": true,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615092720",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}

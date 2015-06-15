@@ -1,0 +1,30 @@
+{
+    "puydufouApp": {
+        "activite" : {
+            "home": {
+                "title": "Activites",
+                "createLabel": "Create a new Activite",
+                "createOrEditLabel": "Create or edit a Activite"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Activite {{ id }}?"
+            },
+            "detail": {
+                "title": "Activite"
+            },
+            "nom_activite": "Nom_activite",
+            "description_activite": "Description_activite",
+            "duree_activite": "Duree_activite",
+            "photo_activite": "Photo_activite",
+            "date_creation": "Date_creation",
+            "nb_acteurs": "Nb_acteurs",
+            "evt_historique": "Evt_historique",
+            "position": "Position",
+            "parc": "parc",
+            "note": "note",
+            "type_activite": "type_activite",
+            "horaire": "horaire",
+            "menu_Restaurant": "menu_Restaurant"
+        }
+    }
+}

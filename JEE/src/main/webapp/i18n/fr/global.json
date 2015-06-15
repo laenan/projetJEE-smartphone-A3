@@ -6,8 +6,13 @@
             "home": "Accueil",
             "entities": {
                 "main": "Entités",
+<<<<<<< HEAD
                 "menu_Restaurant": "Menu_Restaurant",
                 "horaire": "Horaire",
+=======
+                "parc": "Parc",
+                "activite": "Activite",
+>>>>>>> a5feabac8f722228a130d6b97b7d3cde31d12cbf
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

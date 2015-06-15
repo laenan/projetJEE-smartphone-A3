@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="puydufouApp.activite.detail.title">Activite</span> {{activite.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.nom_activite">Nom_activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.nom_activite}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.description_activite">Description_activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.description_activite}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.duree_activite">Duree_activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.duree_activite}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.photo_activite">Photo_activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.photo_activite}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.date_creation">Date_creation</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.date_creation}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.nb_acteurs">Nb_acteurs</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.nb_acteurs}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.evt_historique">Evt_historique</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.evt_historique}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.position">Position</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.position}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.parc">parc</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.parc.nom_parc}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.activite.type_activite">type_activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{activite.type_activite.nom_type}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="activite"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

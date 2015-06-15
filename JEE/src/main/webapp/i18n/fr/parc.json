@@ -1,0 +1,20 @@
+{
+    "puydufouApp": {
+        "parc" : {
+            "home": {
+                "title": "Parcs",
+                "createLabel": "Créer un nouveau Parc",
+                "createOrEditLabel": "Créer ou éditer un Parc"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Parc {{ id }} ?"
+            },
+            "detail": {
+                "title": "Parc"
+            },
+            "description_parc": "Description_parc",
+            "activite": "activite"
+        }
+    }
+}
+
