@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="puydufouApp.menu_Restaurant.detail.title">Menu_Restaurant</span> {{menu_Restaurant.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.entree_nom">Entree_nom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.entree_nom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.entree_photo">Entree_photo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.entree_photo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.plat_nom">Plat_nom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.plat_nom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.plat_photo">Plat_photo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.plat_photo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.dessert_nom">Dessert_nom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.dessert_nom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.dessert_photo">Dessert_photo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.dessert_photo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.tarif_menu">Tarif_menu</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.tarif_menu}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.menu_Restaurant.activite">activite</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{menu_Restaurant.activite.nom_activite}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="menu_Restaurant"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

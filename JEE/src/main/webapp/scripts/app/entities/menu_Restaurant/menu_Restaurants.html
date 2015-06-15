@@ -1,0 +1,168 @@
+<div>
+
+    <h2 translate="puydufouApp.menu_Restaurant.home.title">Menu_Restaurants</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveMenu_RestaurantModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="puydufouApp.menu_Restaurant.home.createLabel">Create a new Menu_Restaurant</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveMenu_RestaurantModal" tabindex="-1" role="dialog" aria-labelledby="myMenu_RestaurantLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myMenu_RestaurantLabel" translate="puydufouApp.menu_Restaurant.home.createOrEditLabel">Create or edit a Menu_Restaurant</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="menu_Restaurant.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.entree_nom">Entree_nom</label>
+                            <input type="text" class="form-control" name="entree_nom"
+                                   ng-model="menu_Restaurant.entree_nom">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.entree_photo">Entree_photo</label>
+                            <input type="text" class="form-control" name="entree_photo"
+                                   ng-model="menu_Restaurant.entree_photo">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.plat_nom">Plat_nom</label>
+                            <input type="text" class="form-control" name="plat_nom"
+                                   ng-model="menu_Restaurant.plat_nom">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.plat_photo">Plat_photo</label>
+                            <input type="text" class="form-control" name="plat_photo"
+                                   ng-model="menu_Restaurant.plat_photo">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.dessert_nom">Dessert_nom</label>
+                            <input type="text" class="form-control" name="dessert_nom"
+                                   ng-model="menu_Restaurant.dessert_nom">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.dessert_photo">Dessert_photo</label>
+                            <input type="text" class="form-control" name="dessert_photo"
+                                   ng-model="menu_Restaurant.dessert_photo">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.tarif_menu">Tarif_menu</label>
+                            <input type="number" class="form-control" name="tarif_menu"
+                                   ng-model="menu_Restaurant.tarif_menu">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="puydufouApp.menu_Restaurant.activite">activite</label>
+                            <select class="form-control" name="activite" ng-model="menu_Restaurant.activite.id" ng-options="activite.id as activite.nom_activite for activite in activites">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteMenu_RestaurantConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(menu_Restaurant.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="puydufouApp.menu_Restaurant.delete.question" translate-values="{id: '{{menu_Restaurant.id}}'}">Are you sure you want to delete this Menu_Restaurant?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="puydufouApp.menu_Restaurant.entree_nom">Entree_nom</th>
+                    <th translate="puydufouApp.menu_Restaurant.entree_photo">Entree_photo</th>
+                    <th translate="puydufouApp.menu_Restaurant.plat_nom">Plat_nom</th>
+                    <th translate="puydufouApp.menu_Restaurant.plat_photo">Plat_photo</th>
+                    <th translate="puydufouApp.menu_Restaurant.dessert_nom">Dessert_nom</th>
+                    <th translate="puydufouApp.menu_Restaurant.dessert_photo">Dessert_photo</th>
+                    <th translate="puydufouApp.menu_Restaurant.tarif_menu">Tarif_menu</th>
+                    <th translate="puydufouApp.menu_Restaurant.activite">activite</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="menu_Restaurant in menu_Restaurants">
+                    <td><a ui-sref="menu_RestaurantDetail({id:menu_Restaurant.id})">{{menu_Restaurant.id}}</a></td>
+                    <td>{{menu_Restaurant.entree_nom}}</td>
+                    <td>{{menu_Restaurant.entree_photo}}</td>
+                    <td>{{menu_Restaurant.plat_nom}}</td>
+                    <td>{{menu_Restaurant.plat_photo}}</td>
+                    <td>{{menu_Restaurant.dessert_nom}}</td>
+                    <td>{{menu_Restaurant.dessert_photo}}</td>
+                    <td>{{menu_Restaurant.tarif_menu}}</td>
+                    <td>{{menu_Restaurant.activite.nom_activite}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="menu_RestaurantDetail({id:menu_Restaurant.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(menu_Restaurant.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(menu_Restaurant.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

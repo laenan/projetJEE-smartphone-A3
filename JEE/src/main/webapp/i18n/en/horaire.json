@@ -1,0 +1,19 @@
+{
+    "puydufouApp": {
+        "horaire" : {
+            "home": {
+                "title": "Horaires",
+                "createLabel": "Create a new Horaire",
+                "createOrEditLabel": "Create or edit a Horaire"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Horaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Horaire"
+            },
+            "date_debut": "Date_debut",
+            "activite": "activite"
+        }
+    }
+}

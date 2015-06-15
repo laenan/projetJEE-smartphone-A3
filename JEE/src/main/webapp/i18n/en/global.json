@@ -6,6 +6,8 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "menu_Restaurant": "Menu_Restaurant",
+                "horaire": "Horaire",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

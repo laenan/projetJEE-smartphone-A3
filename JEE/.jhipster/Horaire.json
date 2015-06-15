@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "activite",
+            "relationshipNameCapitalized": "Activite",
+            "relationshipFieldName": "activite",
+            "otherEntityName": "activite",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Activite",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "nom_activite"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "date_debut",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "Date_debut",
+            "fieldNameUnderscored": "date_debut",
+            "fieldInJavaBeanMethod": "Date_debut",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615093212",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}

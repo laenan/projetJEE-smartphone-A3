@@ -1,0 +1,26 @@
+{
+    "puydufouApp": {
+        "menu_Restaurant" : {
+            "home": {
+                "title": "Menu_Restaurants",
+                "createLabel": "Créer un nouveau Menu_Restaurant",
+                "createOrEditLabel": "Créer ou éditer un Menu_Restaurant"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Menu_Restaurant {{ id }} ?"
+            },
+            "detail": {
+                "title": "Menu_Restaurant"
+            },
+            "entree_nom": "Entree_nom",
+            "entree_photo": "Entree_photo",
+            "plat_nom": "Plat_nom",
+            "plat_photo": "Plat_photo",
+            "dessert_nom": "Dessert_nom",
+            "dessert_photo": "Dessert_photo",
+            "tarif_menu": "Tarif_menu",
+            "activite": "activite"
+        }
+    }
+}
+

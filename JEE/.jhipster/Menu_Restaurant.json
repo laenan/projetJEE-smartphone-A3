@@ -1,0 +1,91 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "activite",
+            "relationshipNameCapitalized": "Activite",
+            "relationshipFieldName": "activite",
+            "otherEntityName": "activite",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Activite",
+            "otherEntityField": "nom_activite"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "entree_nom",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Entree_nom",
+            "fieldNameUnderscored": "entree_nom",
+            "fieldInJavaBeanMethod": "Entree_nom",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "entree_photo",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Entree_photo",
+            "fieldNameUnderscored": "entree_photo",
+            "fieldInJavaBeanMethod": "Entree_photo",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "plat_nom",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Plat_nom",
+            "fieldNameUnderscored": "plat_nom",
+            "fieldInJavaBeanMethod": "Plat_nom",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "plat_photo",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Plat_photo",
+            "fieldNameUnderscored": "plat_photo",
+            "fieldInJavaBeanMethod": "Plat_photo",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "dessert_nom",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Dessert_nom",
+            "fieldNameUnderscored": "dessert_nom",
+            "fieldInJavaBeanMethod": "Dessert_nom",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "dessert_photo",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Dessert_photo",
+            "fieldNameUnderscored": "dessert_photo",
+            "fieldInJavaBeanMethod": "Dessert_photo",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "tarif_menu",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Tarif_menu",
+            "fieldNameUnderscored": "tarif_menu",
+            "fieldInJavaBeanMethod": "Tarif_menu",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615092926",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}
