@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "activite",
+            "relationshipNameCapitalized": "Activite",
+            "relationshipFieldName": "activite",
+            "otherEntityName": "activite",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Activite",
+            "otherEntityRelationshipName": "parc"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "description_parc",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description_parc",
+            "fieldNameUnderscored": "description_parc",
+            "fieldInJavaBeanMethod": "Description_parc",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150615090320",
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}

@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="puydufouApp.parc.detail.title">Parc</span> {{parc.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="puydufouApp.parc.description_parc">Description_parc</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{parc.description_parc}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="parc"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
