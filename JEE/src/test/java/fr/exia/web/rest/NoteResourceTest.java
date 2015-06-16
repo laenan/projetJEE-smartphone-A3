@@ -71,26 +71,6 @@ public class NoteResourceTest {
 
     @Test
     @Transactional
-    public void createNote() throws Exception {
-        int databaseSizeBeforeCreate = noteRepository.findAll().size();
-
-        // Create the Note
-        restNoteMockMvc.perform(post("/api/notes")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(note)))
-                .andExpect(status().isCreated());
-
-        // Validate the Note in the database
-        List<Note> notes = noteRepository.findAll();
-        assertThat(notes).hasSize(databaseSizeBeforeCreate + 1);
-        Note testNote = notes.get(notes.size() - 1);
-        assertThat(testNote.getKeyAPI()).isEqualTo(DEFAULT_KEY_API);
-        assertThat(testNote.getNote()).isEqualTo(DEFAULT_NOTE);
-        assertThat(testNote.getCommentaire_note()).isEqualTo(DEFAULT_COMMENTAIRE_NOTE);
-    }
-
-    @Test
-    @Transactional
     public void getAllNotes() throws Exception {
         // Initialize the database
         noteRepository.saveAndFlush(note);

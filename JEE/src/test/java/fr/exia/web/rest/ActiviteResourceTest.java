@@ -115,27 +115,6 @@ public class ActiviteResourceTest {
 
     @Test
     @Transactional
-    public void getAllActivites() throws Exception {
-        // Initialize the database
-        activiteRepository.saveAndFlush(activite);
-
-        // Get all the activites
-        restActiviteMockMvc.perform(get("/api/activites"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.[*].id").value(hasItem(activite.getId().intValue())))
-                .andExpect(jsonPath("$.[*].nom_activite").value(hasItem(DEFAULT_NOM_ACTIVITE.toString())))
-                .andExpect(jsonPath("$.[*].description_activite").value(hasItem(DEFAULT_DESCRIPTION_ACTIVITE.toString())))
-                .andExpect(jsonPath("$.[*].duree_activite").value(hasItem(DEFAULT_DUREE_ACTIVITE)))
-                .andExpect(jsonPath("$.[*].photo_activite").value(hasItem(DEFAULT_PHOTO_ACTIVITE.toString())))
-                .andExpect(jsonPath("$.[*].date_creation").value(hasItem(DEFAULT_DATE_CREATION.toString())))
-                .andExpect(jsonPath("$.[*].nb_acteurs").value(hasItem(DEFAULT_NB_ACTEURS)))
-                .andExpect(jsonPath("$.[*].evt_historique").value(hasItem(DEFAULT_EVT_HISTORIQUE.toString())))
-                .andExpect(jsonPath("$.[*].position").value(hasItem(DEFAULT_POSITION)));
-    }
-
-    @Test
-    @Transactional
     public void getActivite() throws Exception {
         // Initialize the database
         activiteRepository.saveAndFlush(activite);
