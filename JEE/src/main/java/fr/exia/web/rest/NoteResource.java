@@ -1,8 +1,11 @@
 package fr.exia.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
 import fr.exia.domain.Note;
 import fr.exia.repository.NoteRepository;
+import fr.exia.service.NotationService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -11,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -27,6 +31,9 @@ public class NoteResource {
 
     @Inject
     private NoteRepository noteRepository;
+    
+    @Inject
+    private NotationService nservice;
 
     /**
      * POST  /notes -> Create a new note.
@@ -39,6 +46,9 @@ public class NoteResource {
         log.debug("REST request to save Note : {}", note);
         if (note.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new note cannot already have an ID").build();
+        }
+        if (!nservice.verif(note)){
+        	return (ResponseEntity<Void>) ResponseEntity.badRequest();
         }
         noteRepository.save(note);
         return ResponseEntity.created(new URI("/api/notes/" + note.getId())).build();
