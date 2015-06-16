@@ -3,14 +3,16 @@ package fr.exia.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import fr.exia.domain.util.CustomLocalDateSerializer;
-import fr.exia.domain.util.ISO8601LocalDateDeserializer;
+import fr.exia.domain.util.*;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Type;
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 import javax.persistence.*;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -24,71 +26,81 @@ import java.util.Objects;
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Horaire implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    @JsonSerialize(using = CustomLocalDateSerializer.class)
-    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
-    @Column(name = "date_debut")
-    private LocalDate date_debut;
+	@Column(name = "heure_debut")
+	private int heure_debut;
 
-    @ManyToMany(mappedBy = "nom_activite")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Activite> activites = new HashSet<>();
+	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+	@JsonSerialize(using = CustomLocalDateSerializer.class)
+	@JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+	@Column(name = "date_debut")
+	private LocalDate date_debut;
 
-    public Long getId() {
-        return id;
-    }
+	@ManyToMany(mappedBy = "nom_activite")
+	@JsonIgnore
+	@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+	private Set<Activite> activites = new HashSet<>();
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public LocalDate getDate_debut() {
-        return date_debut;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setDate_debut(LocalDate date_debut) {
-        this.date_debut = date_debut;
-    }
+	public int getHeure_debut() {
+		return heure_debut;
+	}
 
-    public Set<Activite> getActivites() {
-        return activites;
-    }
+	public void setHeure_debut(int heure_debut) {
+		this.heure_debut = heure_debut;
+	}
 
-    public void setActivites(Set<Activite> activites) {
-        this.activites = activites;
-    }
+	public LocalDate getDate_debut() {
+		return date_debut;
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+	public void setDate_debut(LocalDate date_debut) {
+		this.date_debut = date_debut;
+	}
 
-        Horaire horaire = (Horaire) o;
+	public Set<Activite> getActivites() {
+		return activites;
+	}
 
-        if ( ! Objects.equals(id, horaire.id)) return false;
+	public void setActivites(Set<Activite> activites) {
+		this.activites = activites;
+	}
 
-        return true;
-    }
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
+		Horaire horaire = (Horaire) o;
 
-    @Override
-    public String toString() {
-        return "Horaire{" +
-                "id=" + id +
-                ", date_debut='" + date_debut + "'" +
-                '}';
-    }
+		if (!Objects.equals(id, horaire.id))
+			return false;
+
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(id);
+	}
+
+	@Override
+	public String toString() {
+		return "Horaire{" + "id=" + id + ", date_debut='" + date_debut + "'"
+				+ '}';
+	}
 }

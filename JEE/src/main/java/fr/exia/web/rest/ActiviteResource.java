@@ -27,83 +27,82 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class ActiviteResource {
 
-    private final Logger log = LoggerFactory.getLogger(ActiviteResource.class);
+	private final Logger log = LoggerFactory.getLogger(ActiviteResource.class);
 
-    @Inject
-    private ActiviteRepository activiteRepository;
-    
-    @Inject
-    private PlanningService pservice;
+	@Inject
+	private ActiviteRepository activiteRepository;
 
-    /**
-     * POST  /activites -> Create a new activite.
-     */
-    @RequestMapping(value = "/activites",
-            method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public ResponseEntity<Void> create(@RequestBody Activite activite) throws URISyntaxException {
-        log.debug("REST request to save Activite : {}", activite);
-        if (activite.getId() != null) {
-            return ResponseEntity.badRequest().header("Failure", "A new activite cannot already have an ID").build();
-        }
-        activiteRepository.save(activite);
-        return ResponseEntity.created(new URI("/api/activites/" + activite.getId())).build();
-    }
+	@Inject
+	private PlanningService pservice;
 
-    /**
-     * PUT  /activites -> Updates an existing activite.
-     */
-    @RequestMapping(value = "/activites",
-        method = RequestMethod.PUT,
-        produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public ResponseEntity<Void> update(@RequestBody Activite activite) throws URISyntaxException {
-        log.debug("REST request to update Activite : {}", activite);
-        if (activite.getId() == null) {
-            return create(activite);
-        }
-        activiteRepository.save(activite);
-        return ResponseEntity.ok().build();
-    }
+	/**
+	 * POST /activites -> Create a new activite.
+	 */
+	@RequestMapping(value = "/activites", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Timed
+	public ResponseEntity<Void> create(@RequestBody Activite activite)
+			throws URISyntaxException {
+		log.debug("REST request to save Activite : {}", activite);
+		if (activite.getId() != null) {
+			return ResponseEntity
+					.badRequest()
+					.header("Failure",
+							"A new activite cannot already have an ID").build();
+		}
+		activiteRepository.save(activite);
+		return ResponseEntity.created(
+				new URI("/api/activites/" + activite.getId())).build();
+	}
 
-    /**
-     * GET  /activites -> get all the activites.
-     */
-    @RequestMapping(value = "/activites",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public List<Activite> getAll() {
-        log.debug("REST request to get all Activites");
-        return activiteRepository.findAll();
-    }
+	/**
+	 * PUT /activites -> Updates an existing activite.
+	 */
+	@RequestMapping(value = "/activites", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Timed
+	public ResponseEntity<Void> update(@RequestBody Activite activite)
+			throws URISyntaxException {
+		log.debug("REST request to update Activite : {}", activite);
+		if (activite.getId() == null) {
+			return create(activite);
+		}
+		activiteRepository.save(activite);
+		return ResponseEntity.ok().build();
+	}
 
-    /**
-     * GET  /activites/:id -> get the "id" activite.
-     */
-    @RequestMapping(value = "/activites/{id}",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public ResponseEntity<Activite> get(@PathVariable Long id) {
-        log.debug("REST request to get Activite : {}", id);
-        return Optional.ofNullable(activiteRepository.findOneWithEagerRelationships(id))
-            .map(activite -> new ResponseEntity<>(
-                activite,
-                HttpStatus.OK))
-            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
+	/**
+	 * GET /activites -> get all the activites.
+	 */
+	@RequestMapping(value = "/activites", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Timed
+	public List<Activite> getAll(String plage) {
+		if (plage == null) {
+			pservice.getPlage(plage);
+		}
+		log.debug("REST request to get all Activites");
+		return activiteRepository.findAll();
+	}
 
-    /**
-     * DELETE  /activites/:id -> delete the "id" activite.
-     */
-    @RequestMapping(value = "/activites/{id}",
-            method = RequestMethod.DELETE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public void delete(@PathVariable Long id) {
-        log.debug("REST request to delete Activite : {}", id);
-        activiteRepository.delete(id);
-    }
+	/**
+	 * GET /activites/:id -> get the "id" activite.
+	 */
+	@RequestMapping(value = "/activites/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Timed
+	public ResponseEntity<Activite> get(@PathVariable Long id) {
+		log.debug("REST request to get Activite : {}", id);
+		return Optional
+				.ofNullable(
+						activiteRepository.findOneWithEagerRelationships(id))
+				.map(activite -> new ResponseEntity<>(activite, HttpStatus.OK))
+				.orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+	}
+
+	/**
+	 * DELETE /activites/:id -> delete the "id" activite.
+	 */
+	@RequestMapping(value = "/activites/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Timed
+	public void delete(@PathVariable Long id) {
+		log.debug("REST request to delete Activite : {}", id);
+		activiteRepository.delete(id);
+	}
 }
