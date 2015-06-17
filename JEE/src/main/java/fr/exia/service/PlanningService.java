@@ -54,7 +54,7 @@ public class PlanningService {
 		return lista;
 	}
 
-	public List<Activite> planingOpti(int hrequest) { // validé reste tsortie
+	public List<Activite> planingOpti(int hrequest) { // validï¿½ reste tsortie
 		List<Activite> lista = new ArrayList<Activite>();
 		int HeureFinPrec = hrequest, HeureDebutSuiv = 0;
 		int deplacement = 10, dureeRepas = 0100;
@@ -76,8 +76,8 @@ public class PlanningService {
 				}
 			}
 			lista.add(prochaineActivite);
-			HeureFinPrec =formatage( HeureDebutSuiv
-					+ prochaineActivite.getDuree_activite() + deplacement);
+			HeureFinPrec =ajoutETformatage( HeureDebutSuiv
+					, prochaineActivite.getDuree_activite(), deplacement);
 			if (HeureFinPrec >= 1200 && HeureFinPrec < 1400 && repasMidi==false) {
 				repasMidi=true;
 				HeureFinPrec+=dureeRepas;
@@ -90,12 +90,11 @@ public class PlanningService {
 		return lista;
 	}
 
-	private int formatage(int i) {
-		int x = (i/100)*100;
-		int y = i - x;
-		int z = y/60;
-		int r = z*60;
-		i = x + z + r;
-		return i;
+	private int ajoutETformatage(int heureDebut,int duree, int deplacement) {
+		int heures = (heureDebut/100)*100;
+		int minutesNonFormates = (heureDebut - heures)+duree+deplacement;
+		int heuresAjoutes = minutesNonFormates/60;
+		int minutesRestantes=minutesNonFormates%60;
+		return heures + heuresAjoutes*100+minutesRestantes;
 	}
 }
