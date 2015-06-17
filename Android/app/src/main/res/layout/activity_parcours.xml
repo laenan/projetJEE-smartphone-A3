@@ -13,7 +13,7 @@
         android:background="#d4010111"
         android:weightSum="1"
         android:orientation="vertical"
-        android:id="@+id/">
+        android:id="@+id/b">
 
         <TextView
             android:layout_width="match_parent"
@@ -36,13 +36,11 @@
             android:layout_gravity="right"
             android:background="@drawable/add" />
 
-        <TextView
+        <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/activites_choisies"
-            android:id="@+id/textView3"
-            android:layout_weight="0.88" />
+            android:layout_height="388dp"
+            android:id="@+id/listView2"
+            android:choiceMode="singleChoice" />
 
     </LinearLayout>
 
