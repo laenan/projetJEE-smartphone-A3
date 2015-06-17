@@ -1,5 +1,6 @@
 package fr.exia.puydufou;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
 
 public class HomeActivity extends ActionBarActivity {
 
@@ -18,6 +20,32 @@ public class HomeActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 
+        Button buttonActivities=(Button) findViewById(R.id.buttonActivities) ;
+        buttonActivities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ActivitiesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonParcours=(Button) findViewById(R.id.buttonParcours) ;
+        buttonParcours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ParcoursActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonPlanning=(Button) findViewById(R.id.buttonPlanning) ;
+        buttonPlanning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ActivitiesActivity.class);
+                startActivity(intent);
+            }
+        });
 	}
 
 	@Override
@@ -38,8 +66,6 @@ public class HomeActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
 
 
 	/**

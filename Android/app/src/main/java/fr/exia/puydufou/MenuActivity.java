@@ -10,15 +10,9 @@ public class MenuActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_home);
-    final Button button=(Button) findViewById(R.id.button) ;
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                        int i;
-            }
-        });
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
     }
 
 
