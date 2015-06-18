@@ -31,10 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/activites_choisies"
             android:id="@+id/textView3"
             android:layout_weight="0.88" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
 
 </LinearLayout>
