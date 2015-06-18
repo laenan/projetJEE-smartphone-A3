@@ -57,7 +57,7 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
                     RestTemplate restTemplate = new RestTemplate();
                     restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                     detailActiviteViewModel greeting = restTemplate.getForObject(url, detailActiviteViewModel.class);
-                    Log.e(" Oh yeah, it works !! ", greeting.getNom());
+                    Log.e(" Oh yeah, it works !! ", greeting.getNom_activite());
                     return greeting;
                 } catch (Exception e) {
                     Log.e("So bad it didn't work!!", e.getMessage(), e);
@@ -68,7 +68,7 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
 
             @Override
             protected void onPostExecute(detailActiviteViewModel greeting) {
-                Log.e("MainActivity", greeting.getNom());
+                Log.e("MainActivity", greeting.getNom_activite());
                 //TextView greetingIdText = (TextView) findViewById(R.id.id_value);
                 //TextView greetingContentText = (TextView) findViewById(R.id.content_value);
                 //greetingIdText.setText(greeting.getId());

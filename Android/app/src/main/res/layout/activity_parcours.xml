@@ -26,7 +26,7 @@
             android:autoText="false"
             android:textSize="@dimen/textSize"
             android:textAlignment="center"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.34" />
 
         <Button
             style="?android:attr/buttonStyleSmall"

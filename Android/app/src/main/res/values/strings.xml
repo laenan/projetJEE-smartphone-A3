@@ -5,12 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="activite">activites</string>
-    <string name="planning">planning</string>
-    <string name="parcours">parcours</string>
+    <string name="activite">ACTIVITE</string>
     <string name="parcours_titre">MON PARCOURS</string>
     <string name="planning_titre">MON PLANNING</string>
     <string name="detail_activite"> NOM ACTIVITE</string>
     <string name="noter"></string>
-<string name="liste_activite_choisies"></string>
+    <string name="liste_activite_choisies"></string>
+    <string name="duree"> Durée: </string>
+    <string name="description"> Description : </string>
 </resources>
