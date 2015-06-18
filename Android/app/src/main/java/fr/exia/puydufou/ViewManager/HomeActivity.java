@@ -34,7 +34,7 @@ public class HomeActivity extends Activity {
         Button buttonPlanning = (Button)this.findViewById(R.id.buttonPlanning);
         buttonPlanning.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ActivitiesActivity.class);
+                Intent intent = new Intent(HomeActivity.this, PlanningActivity.class);
                 HomeActivity.this.startActivity(intent);
             }
         });

@@ -1,15 +1,11 @@
 package fr.exia.puydufou.ViewManager;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
@@ -57,7 +53,7 @@ public class ActivitiesActivity extends Activity {
         @Override
         protected activityListViewModel doInBackground(Void... params) {
             try {
-                final String url = "http://10.0.2.2:8080/api/activites";
+                final String url = "http://10.0.2.2:8080/api/parcs";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 activityListViewModel greeting = restTemplate.getForObject(url, activityListViewModel.class);

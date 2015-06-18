@@ -7,6 +7,10 @@ package fr.exia.puydufou.ViewModel;
 public class detailActiviteViewModel {
     private String id;
     private String nom;
+    private String description;
+    private String duree;
+    //private localDa
+
 
     public String getId() {
         return this.id;
