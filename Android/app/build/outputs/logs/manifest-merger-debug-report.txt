@@ -39,7 +39,7 @@ MERGED from com.android.support:support-v4:22.2.0:22:5
 		ADDED from AndroidManifest.xml:13:9
 	android:theme
 		ADDED from AndroidManifest.xml:15:9
-activity#fr.exia.puydufou.HomeActivity
+activity#fr.exia.puydufou.ViewManager.HomeActivity
 ADDED from AndroidManifest.xml:16:9
 	android:label
 		ADDED from AndroidManifest.xml:18:13
@@ -55,19 +55,19 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:22:17
 	android:name
 		ADDED from AndroidManifest.xml:22:27
-activity#fr.exia.puydufou.ActivitiesActivity
+activity#fr.exia.puydufou.ViewManager.ActivitiesActivity
 ADDED from AndroidManifest.xml:25:9
 	android:label
 		ADDED from AndroidManifest.xml:27:13
 	android:name
 		ADDED from AndroidManifest.xml:26:13
-activity#fr.exia.puydufou.PlanningActivity
+activity#fr.exia.puydufou.ViewManager.PlanningActivity
 ADDED from AndroidManifest.xml:28:9
 	android:label
 		ADDED from AndroidManifest.xml:30:13
 	android:name
 		ADDED from AndroidManifest.xml:29:13
-activity#fr.exia.puydufou.ParcoursActivity
+activity#fr.exia.puydufou.ViewManager.ParcoursActivity
 ADDED from AndroidManifest.xml:31:9
 	android:label
 		ADDED from AndroidManifest.xml:33:13

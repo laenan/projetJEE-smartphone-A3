@@ -9,11 +9,11 @@
         <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\classes-a342ba016e0d61a4cbbfc7625ed8014aadf070a6.jar" />
     </item>
     <item
-        jar="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="C:\Users\Asvina\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-rest-template\1.0.1.RELEASE\e132d929bd181941f79b0d63edafb8a86ae6fd33\spring-android-rest-template-1.0.1.RELEASE.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-8037a0ae2a1ea8056cdd900f3dd37bc13081048e.jar" />
+        sha1="e132d929bd181941f79b0d63edafb8a86ae6fd33">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\spring-android-rest-template-1.0.1.RELEASE-f1a370d3699d97c1d455acaca24aab472c08b1e8.jar" />
     </item>
     <item
         jar="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
@@ -23,11 +23,46 @@
         <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\classes-1fb5e20e8ab797bdbb5a16083e56d4c74f3a58cd.jar" />
     </item>
     <item
+        jar="C:\Users\Asvina\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.3.2\559b70ac8a0d5cad611da4223137a920147201ba\jackson-core-2.3.2.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="559b70ac8a0d5cad611da4223137a920147201ba">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\jackson-core-2.3.2-0dd553b0714443929af46f1c0cf29dfb67e37c75.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asvina\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.3.2\c75edc740a6d8cb1cef6fa82fa594e0bce561916\jackson-databind-2.3.2.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="c75edc740a6d8cb1cef6fa82fa594e0bce561916">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\jackson-databind-2.3.2-dd1be14976b805f72a2f761d823fc5222d9be396.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-8037a0ae2a1ea8056cdd900f3dd37bc13081048e.jar" />
+    </item>
+    <item
         jar="C:\Users\Asvina\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
         <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-a1d5b642984c2f57880229de2f6ab1ba3bfeaed4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asvina\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.3.0\f5e853a20b60758922453d56f9ae1e64af5cb3da\jackson-annotations-2.3.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="f5e853a20b60758922453d56f9ae1e64af5cb3da">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.3.0-e18f278eb61a6491e804855bd47938e4301c0152.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asvina\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-core\1.0.1.RELEASE\e68f0e8e4b636ee30c4de58953be38d9b72a5e3b\spring-android-core-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="e68f0e8e4b636ee30c4de58953be38d9b72a5e3b">
+        <dex dex="C:\Users\Asvina\Documents\Workspace\Android\app\build\intermediates\pre-dexed\debug\spring-android-core-1.0.1.RELEASE-1b6603c77bc82683a7c176532f8018f58f56de56.jar" />
     </item>
 
 </items>
