@@ -8,15 +8,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import fr.exia.puydufou.Database.SQLiteDatabaseHandler;
 import fr.exia.puydufou.R;
 
 /**
  * Created by araguin on 17/06/15.
  */
 public class HomeActivity extends Activity {
+
+    SQLiteDatabaseHandler db;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_home);
+
         Button buttonActivities = (Button)this.findViewById(R.id.buttonActivities);
         buttonActivities.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -24,6 +30,7 @@ public class HomeActivity extends Activity {
                 HomeActivity.this.startActivity(intent);
             }
         });
+
         Button buttonParcours = (Button)this.findViewById(R.id.buttonParcours);
         buttonParcours.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -31,6 +38,7 @@ public class HomeActivity extends Activity {
                 HomeActivity.this.startActivity(intent);
             }
         });
+
         Button buttonPlanning = (Button)this.findViewById(R.id.buttonPlanning);
         buttonPlanning.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -56,4 +64,8 @@ public class HomeActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+
+
+    }
+

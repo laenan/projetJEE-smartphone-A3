@@ -15,8 +15,7 @@ public class ParcoursActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parcours);
-
-
+        
     }
 
     @Override
@@ -25,6 +24,7 @@ public class ParcoursActivity extends Activity{
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
