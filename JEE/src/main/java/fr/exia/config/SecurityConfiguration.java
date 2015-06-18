@@ -132,11 +132,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/api-docs/**").hasAuthority(AuthoritiesConstants.ADMIN)
             .antMatchers("/protected/**").authenticated()
             .antMatchers("/api/parcs").permitAll()
-        /*    .antMatchers("/api/parcs").permitAll()
-            .antMatchers("/api/parcs").permitAll()
-            .antMatchers("/api/parcs").permitAll()
-            .antMatchers("/api/parcs").permitAll()
-            .antMatchers("/api/parcs").permitAll()*/
+            .antMatchers("/api/horaires").permitAll()
+            .antMatchers("/api/activites").permitAll()
+            .antMatchers("/api/type_activites").permitAll()
+            .antMatchers("/api/notes").permitAll()
+            .antMatchers("/api/menu_restaurants").permitAll()
             ;
 
     }
