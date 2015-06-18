@@ -1,8 +1,10 @@
 package fr.exia.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
 import fr.exia.domain.Menu_Restaurant;
 import fr.exia.repository.Menu_RestaurantRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -11,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -67,6 +70,7 @@ public class Menu_RestaurantResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public List<Menu_Restaurant> getAll() {
         log.debug("REST request to get all Menu_Restaurants");
         return menu_RestaurantRepository.findAll();
@@ -79,6 +83,7 @@ public class Menu_RestaurantResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public ResponseEntity<Menu_Restaurant> get(@PathVariable Long id) {
         log.debug("REST request to get Menu_Restaurant : {}", id);
         return Optional.ofNullable(menu_RestaurantRepository.findOne(id))
