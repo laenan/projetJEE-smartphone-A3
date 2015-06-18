@@ -7,7 +7,7 @@ angular.module('puydufouApp')
                 parent: 'entity',
                 url: '/horaire',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: [],
                     pageTitle: 'puydufouApp.horaire.home.title'
                 },
                 views: {
@@ -27,7 +27,7 @@ angular.module('puydufouApp')
                 parent: 'entity',
                 url: '/horaire/:id',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: [],
                     pageTitle: 'puydufouApp.horaire.detail.title'
                 },
                 views: {
