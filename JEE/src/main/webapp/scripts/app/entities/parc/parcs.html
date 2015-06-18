@@ -87,6 +87,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>nom_parc</th>
                     <th translate="puydufouApp.parc.description_parc">Description_parc</th>
                     <th></th>
                 </tr>
@@ -94,6 +95,7 @@
             <tbody>
                 <tr ng-repeat="parc in parcs">
                     <td><a ui-sref="parcDetail({id:parc.id})">{{parc.id}}</a></td>
+                    <td>{{parc.nom_parc}}</td>
                     <td>{{parc.description_parc}}</td>
                     <td>
                         <button type="submit"
