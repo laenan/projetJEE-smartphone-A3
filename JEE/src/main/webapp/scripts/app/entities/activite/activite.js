@@ -7,7 +7,7 @@ angular.module('puydufouApp')
                 parent: 'entity',
                 url: '/activite',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: [],
                     pageTitle: 'puydufouApp.activite.home.title'
                 },
                 views: {
@@ -27,7 +27,7 @@ angular.module('puydufouApp')
                 parent: 'entity',
                 url: '/activite/:id',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: [],
                     pageTitle: 'puydufouApp.activite.detail.title'
                 },
                 views: {
