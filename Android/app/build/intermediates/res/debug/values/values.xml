@@ -214,6 +214,7 @@
     <string name="detail_activite"> NOM ACTIVITE</string>
     <string name="hello_world">Hello world!</string>
     <string name="liste_activite_choisies"/>
+    <string name="noter"/>
     <string name="parcours">parcours</string>
     <string name="parcours_titre">MON PARCOURS</string>
     <string name="planning">planning</string>

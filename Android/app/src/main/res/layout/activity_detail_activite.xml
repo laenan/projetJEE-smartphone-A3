@@ -36,6 +36,15 @@
             android:layout_gravity="right"
             android:background="@drawable/add" />
 
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="46dp"
+            android:layout_height="48dp"
+            android:id="@+id/noter"
+            android:text="@string/noter"
+            android:layout_gravity="right"
+            android:background="@drawable/etoile"/>
+
     </LinearLayout>
 
 </LinearLayout>

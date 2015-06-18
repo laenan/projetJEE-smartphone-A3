@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="fr.exia.puydufou.HomeActivity"
+            android:name="fr.exia.puydufou.ViewManager.HomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="fr.exia.puydufou.ActivitiesActivity"
+            android:name="fr.exia.puydufou.ViewManager.ActivitiesActivity"
             android:label="@string/activite" />
         <activity
-            android:name="fr.exia.puydufou.PlanningActivity"
+            android:name="fr.exia.puydufou.ViewManager.PlanningActivity"
             android:label="@string/planning" />
         <activity
-            android:name="fr.exia.puydufou.ParcoursActivity"
+            android:name="fr.exia.puydufou.ViewManager.ParcoursActivity"
             android:label="@string/parcours" />
     </application>
 
