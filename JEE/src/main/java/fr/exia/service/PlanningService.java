@@ -59,7 +59,7 @@ public class PlanningService {
 		int HeureFinPrec = hrequest, HeureDebutSuiv = 0;
 		int deplacement = 10, dureeRepas = 0100;
 		Activite prochaineActivite = null;
-		boolean repasMidi=false,repasSoir=false;
+		boolean repasMidi = false, repasSoir = false;
 
 		while (HeureFinPrec < 2200) {
 
@@ -75,26 +75,30 @@ public class PlanningService {
 					}
 				}
 			}
-			lista.add(prochaineActivite);
-			HeureFinPrec =ajoutETformatage( HeureDebutSuiv
-					, prochaineActivite.getDuree_activite(), deplacement);
-			if (HeureFinPrec >= 1200 && HeureFinPrec < 1400 && repasMidi==false) {
-				repasMidi=true;
-				HeureFinPrec+=dureeRepas;
+			if (!lista.contains(prochaineActivite)) {
+				lista.add(prochaineActivite);
 			}
-			if (HeureFinPrec >= 1930 && HeureFinPrec < 2200 && repasSoir==false) {
-				repasSoir=true;
-				HeureFinPrec+=dureeRepas;
+			HeureFinPrec = ajoutETformatage(HeureDebutSuiv,
+					prochaineActivite.getDuree_activite(), deplacement);
+			if (HeureFinPrec >= 1200 && HeureFinPrec < 1400
+					&& repasMidi == false) {
+				repasMidi = true;
+				HeureFinPrec += dureeRepas;
+			}
+			if (HeureFinPrec >= 1930 && HeureFinPrec < 2200
+					&& repasSoir == false) {
+				repasSoir = true;
+				HeureFinPrec += dureeRepas;
 			}
 		}
 		return lista;
 	}
 
-	private int ajoutETformatage(int heureDebut,int duree, int deplacement) {
-		int heures = (heureDebut/100)*100;
-		int minutesNonFormates = (heureDebut - heures)+duree+deplacement;
-		int heuresAjoutes = minutesNonFormates/60;
-		int minutesRestantes=minutesNonFormates%60;
-		return heures + heuresAjoutes*100+minutesRestantes;
+	private int ajoutETformatage(int heureDebut, int duree, int deplacement) {
+		int heures = (heureDebut / 100) * 100;
+		int minutesNonFormates = (heureDebut - heures) + duree + deplacement;
+		int heuresAjoutes = minutesNonFormates / 60;
+		int minutesRestantes = minutesNonFormates % 60;
+		return heures + heuresAjoutes * 100 + minutesRestantes;
 	}
 }

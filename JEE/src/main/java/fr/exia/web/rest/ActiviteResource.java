@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -74,8 +75,9 @@ public class ActiviteResource {
 	 */
 	@RequestMapping(value = "/activites", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@Timed
+	@Async
 	public List<Activite> getAll(String plage) {
-		if (plage == null) {
+		if (plage != null) {
 			pservice.getPlage(plage);
 		}
 		log.debug("REST request to get all Activites");
@@ -87,6 +89,7 @@ public class ActiviteResource {
 	 */
 	@RequestMapping(value = "/activites/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@Timed
+	@Async
 	public ResponseEntity<Activite> get(@PathVariable Long id) {
 		log.debug("REST request to get Activite : {}", id);
 		return Optional

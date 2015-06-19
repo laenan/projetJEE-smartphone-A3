@@ -8,12 +8,18 @@
     <string name="activite">ACTIVITE</string>
     <string name="parcours_titre">MON PARCOURS</string>
     <string name="planning_titre">MON PLANNING</string>
+    <string name="DetailActivite">Détail d'une activité</string>
     <string name="detail_activite"> NOM ACTIVITE</string>
     <string name="noter"></string>
+<<<<<<< HEAD
     <string name="liste_activite_choisies"></string>
     <string name="duree"> Durée: </string>
     <string name="description"> Description : </string>
     <string name="spectacle1">10H30 - Le Bal des Oiseaux Fantômes \n Emplacement 3 - Durée: 33\' \n \n 11h15 - Mousquetaire de Richelieu - \n Emplacement 5 - Durée 30\' \n \n 11H45 - Les Automates Musiciens \n Emplacement 11 - Durée 7\' \n
     </string>
 
+=======
+    <string name="activities_titre">Activités Puy du fou</string>
+    <string name="liste_activite_choisies"></string>
+>>>>>>> 0a94b80e699e6eec672872f1f2c1d3efc26b129a
 </resources>

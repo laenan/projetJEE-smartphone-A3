@@ -32,7 +32,14 @@
             android:label="planning_titre" />
         <activity
             android:name="fr.exia.puydufou.ViewManager.ParcoursActivity"
+<<<<<<< HEAD
             android:label="parcours_titre" />
+=======
+            android:label="@string/parcours" />
+        <activity
+            android:name="fr.exia.puydufou.ViewManager.DetailActiviteActivity"
+            android:label="@string/DetailActivite" />
+>>>>>>> 0a94b80e699e6eec672872f1f2c1d3efc26b129a
     </application>
 
 </manifest>

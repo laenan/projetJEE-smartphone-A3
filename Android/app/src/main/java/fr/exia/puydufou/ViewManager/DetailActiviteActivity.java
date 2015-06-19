@@ -11,10 +11,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.exia.puydufou.R;
+import fr.exia.puydufou.RestResponse.GetAllActiviteRest;
 import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
 
 /**
@@ -27,6 +32,7 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_detail_activite);
 
+<<<<<<< HEAD
             Button add = (Button)this.findViewById(R.id.add);
             add.setOnClickListener(new OnClickListener() {
 
@@ -37,6 +43,8 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
                     DetailActiviteActivity.this.startActivity(intent);
                 }
             });
+=======
+>>>>>>> 0a94b80e699e6eec672872f1f2c1d3efc26b129a
         }
 
 
@@ -65,6 +73,7 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
             return super.onOptionsItemSelected(item);
         }
 
+<<<<<<< HEAD
         private class HttpRequestTask extends AsyncTask<Void, Void, detailActiviteViewModel> {
             @Override
             protected detailActiviteViewModel doInBackground(Void... params) {
@@ -89,9 +98,44 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
                 //TextView greetingContentText = (TextView) findViewById(R.id.content_value);
                 //greetingIdText.setText(greeting.getId());
                 //greetingContentText.setText(greeting.getContent());
+=======
+
+    private class HttpRequestTask extends AsyncTask<Void, Void, GetAllActiviteRest>{
+        @Override
+        protected GetAllActiviteRest doInBackground(Void... params) {
+            try {
+                final String url = "http://10.0.2.2:8080/api/activites/1";
+                RestTemplate restTemplate = new RestTemplate();
+                List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
+                messageConverters.add(new MappingJackson2HttpMessageConverter());
+                restTemplate.setMessageConverters(messageConverters);
+                //List<activityListViewModel> resultList = Arrays.asList(restTemplate.getForObject(url, activityListViewModel[].class));
+                GetAllActiviteRest greeting = restTemplate.getForObject(url, GetAllActiviteRest.class);
+                //Log.e("Worked!!!!!!!!!!! ", greeting);
+                return greeting;
+            } catch (Exception e) {
+                Log.e("didn't work!!!!!!!!!!", e.getMessage(), e);
+>>>>>>> 0a94b80e699e6eec672872f1f2c1d3efc26b129a
             }
+
+            return null;
+        }
+
+<<<<<<< HEAD
+=======
+        @Override
+        protected void onPostExecute(GetAllActiviteRest greeting) {
+
+            //Log.e("MainActivity", greeting.toString());
+
+            //TextView greetingContentText = (TextView) findViewById(R.id.content_value);
+            //greetingIdText.setText(greeting.getId());
+            //greetingContentText.setText(greeting.getContent());
+
 
         }
 
+    }
+>>>>>>> 0a94b80e699e6eec672872f1f2c1d3efc26b129a
     }
 

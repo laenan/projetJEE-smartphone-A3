@@ -46,6 +46,7 @@ public class PlanningResource {
 
 	@RequestMapping(value = "/planning", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@Timed
+	@Async
 	public List<Activite> getPlaningOpti() {
 		log.debug("REST request to get the best planning");
 		return pservice.planingOpti((Integer.parseInt(new Date().getHours()*100+new Date().getMinutes()+"")));

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -42,6 +43,7 @@ public class NoteResource {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public ResponseEntity<Void> create(@RequestBody Note note) throws URISyntaxException {
         log.debug("REST request to save Note : {}", note);
         if (note.getId() != null) {
@@ -61,6 +63,7 @@ public class NoteResource {
         method = RequestMethod.PUT,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public ResponseEntity<Void> update(@RequestBody Note note) throws URISyntaxException {
         log.debug("REST request to update Note : {}", note);
         if (note.getId() == null) {
@@ -77,6 +80,7 @@ public class NoteResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public List<Note> getAll() {
         log.debug("REST request to get all Notes");
         return noteRepository.findAll();
@@ -89,6 +93,7 @@ public class NoteResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public ResponseEntity<Note> get(@PathVariable Long id) {
         log.debug("REST request to get Note : {}", id);
         return Optional.ofNullable(noteRepository.findOne(id))
@@ -105,6 +110,7 @@ public class NoteResource {
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @Async
     public void delete(@PathVariable Long id) {
         log.debug("REST request to delete Note : {}", id);
         noteRepository.delete(id);
