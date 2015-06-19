@@ -1,9 +1,12 @@
 package fr.exia.puydufou.ViewManager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import fr.exia.puydufou.R;
 
@@ -15,6 +18,17 @@ public class ParcoursActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parcours);
+
+        Button add = (Button)this.findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ParcoursActivity.this, ActivitiesActivity.class);
+                ParcoursActivity.this.startActivity(intent);
+            }
+        });
         
     }
 
@@ -37,4 +51,7 @@ public class ParcoursActivity extends Activity{
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

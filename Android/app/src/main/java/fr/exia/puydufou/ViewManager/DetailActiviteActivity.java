@@ -1,11 +1,15 @@
 package fr.exia.puydufou.ViewManager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
@@ -22,7 +26,19 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_detail_activite);
+
+            Button add = (Button)this.findViewById(R.id.add);
+            add.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(DetailActiviteActivity.this, ParcoursActivity.class);
+                    DetailActiviteActivity.this.startActivity(intent);
+                }
+            });
         }
+
 
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
@@ -76,5 +92,6 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
             }
 
         }
+
     }
 

@@ -57,7 +57,7 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="46dp"
             android:layout_height="48dp"
-            android:id="@+id/ajout_activite"
+            android:id="@+id/add"
             android:layout_gravity="right"
             android:background="@drawable/add" />
 

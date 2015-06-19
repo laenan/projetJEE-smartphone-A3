@@ -209,16 +209,18 @@
     <!-- From: file:/C:/Users/Asvina/Documents/Workspace/Android/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
-    <string name="activite">activites</string>
+    <string name="activite">ACTIVITE</string>
     <string name="app_name">Puy Du Fou</string>
+    <string name="description"> Description : </string>
     <string name="detail_activite"> NOM ACTIVITE</string>
+    <string name="duree"> Durée: </string>
     <string name="hello_world">Hello world!</string>
     <string name="liste_activite_choisies"/>
     <string name="noter"/>
-    <string name="parcours">parcours</string>
     <string name="parcours_titre">MON PARCOURS</string>
-    <string name="planning">planning</string>
     <string name="planning_titre">MON PLANNING</string>
+    <string name="spectacle1">10H30 - Le Bal des Oiseaux Fantômes \n Emplacement 3 - Durée: 33\' \n \n 11h15 - Mousquetaire de Richelieu - \n Emplacement 5 - Durée 30\' \n \n 11H45 - Les Automates Musiciens \n Emplacement 11 - Durée 7\' \n
+    </string>
     <!-- From: file:/C:/Users/Asvina/Documents/Workspace/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

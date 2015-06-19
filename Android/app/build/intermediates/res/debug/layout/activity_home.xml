@@ -70,7 +70,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="@string/planning"
+                android:text="@string/planning_titre"
                 android:id="@+id/buttonPlanning"
                 android:layout_gravity="center_vertical"
                 android:shadowColor="#ffff932f"
@@ -96,7 +96,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="@string/parcours"
+                android:text="@string/parcours_titre"
                 android:id="@+id/buttonParcours"
                 android:layout_gravity="center_vertical"
                 android:shadowColor="#ffff932f"

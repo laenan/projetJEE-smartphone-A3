@@ -26,13 +26,13 @@
         </activity>
         <activity
             android:name="fr.exia.puydufou.ViewManager.ActivitiesActivity"
-            android:label="@string/activite" />
+            android:label="activite" />
         <activity
             android:name="fr.exia.puydufou.ViewManager.PlanningActivity"
-            android:label="@string/planning" />
+            android:label="planning_titre" />
         <activity
             android:name="fr.exia.puydufou.ViewManager.ParcoursActivity"
-            android:label="@string/parcours" />
+            android:label="parcours_titre" />
     </application>
 
 </manifest>

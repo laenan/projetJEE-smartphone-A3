@@ -23,6 +23,8 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_home);
 
+        db = new SQLiteDatabaseHandler(this);
+
         Button buttonActivities = (Button)this.findViewById(R.id.buttonActivities);
         buttonActivities.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

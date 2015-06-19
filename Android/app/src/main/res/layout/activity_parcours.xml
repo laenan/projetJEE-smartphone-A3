@@ -26,7 +26,7 @@
             android:autoText="false"
             android:textSize="@dimen/textSize"
             android:textAlignment="center"
-            android:layout_weight="0.34" />
+            android:layout_weight="0.04" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -36,11 +36,13 @@
             android:layout_gravity="right"
             android:background="@drawable/add" />
 
-        <ListView
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="388dp"
-            android:id="@+id/listView2"
-            android:choiceMode="singleChoice" />
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/spectacle1"
+            android:id="@+id/textView6"
+            android:layout_weight="0.67" />
 
     </LinearLayout>
 
