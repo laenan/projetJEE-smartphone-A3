@@ -3,4 +3,35 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout><!-- From: file:/C:/Users/Asvina/Documents/Workspace/Android/app/src/main/res/layout/activity_activites.xml -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d4010111"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:id="@+id/b">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/activities_titre"
+            android:id="@+id/textView"
+            android:background="#d4010111"
+            style="@android:style/Animation"
+            android:autoText="false"
+            android:textSize="@dimen/textSize"
+            android:textAlignment="center"
+            android:layout_weight="0.02" />
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="388dp"
+            android:id="@+id/ActivityList"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:fastScrollAlwaysVisible="false"/>
+
+    </LinearLayout>
+</LinearLayout><!-- From: file:/home/araguin/Projet-JEE-PuyDuFou/projetJEE-smartphone-A3/Android/app/src/main/res/layout/activity_activites.xml -->

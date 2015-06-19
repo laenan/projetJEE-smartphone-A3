@@ -33,6 +33,9 @@
         <activity
             android:name="fr.exia.puydufou.ViewManager.ParcoursActivity"
             android:label="@string/parcours" />
+        <activity
+            android:name="fr.exia.puydufou.ViewManager.DetailActiviteActivity"
+            android:label="@string/DetailActivite" />
     </application>
 
 </manifest>

@@ -10,7 +10,9 @@
     <string name="parcours">parcours</string>
     <string name="parcours_titre">MON PARCOURS</string>
     <string name="planning_titre">MON PLANNING</string>
+    <string name="DetailActivite">Détail d'une activité</string>
     <string name="detail_activite"> NOM ACTIVITE</string>
     <string name="noter"></string>
-<string name="liste_activite_choisies"></string>
+    <string name="activities_titre">Activités Puy du fou</string>
+    <string name="liste_activite_choisies"></string>
 </resources>

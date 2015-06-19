@@ -7,10 +7,15 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.exia.puydufou.R;
+import fr.exia.puydufou.RestResponse.GetAllActiviteRest;
 import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
 
 /**
@@ -22,6 +27,7 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_detail_activite);
+
         }
 
         @Override
@@ -49,32 +55,39 @@ import fr.exia.puydufou.ViewModel.detailActiviteViewModel;
             return super.onOptionsItemSelected(item);
         }
 
-        private class HttpRequestTask extends AsyncTask<Void, Void, detailActiviteViewModel> {
-            @Override
-            protected detailActiviteViewModel doInBackground(Void... params) {
-                try {
-                    final String url = "http://10.0.2.2:8080/api/detailactivite";
-                    RestTemplate restTemplate = new RestTemplate();
-                    restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                    detailActiviteViewModel greeting = restTemplate.getForObject(url, detailActiviteViewModel.class);
-                    Log.e(" Oh yeah, it works !! ", greeting.getNom());
-                    return greeting;
-                } catch (Exception e) {
-                    Log.e("So bad it didn't work!!", e.getMessage(), e);
-                }
 
-                return null;
+    private class HttpRequestTask extends AsyncTask<Void, Void, GetAllActiviteRest>{
+        @Override
+        protected GetAllActiviteRest doInBackground(Void... params) {
+            try {
+                final String url = "http://10.0.2.2:8080/api/activites/1";
+                RestTemplate restTemplate = new RestTemplate();
+                List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
+                messageConverters.add(new MappingJackson2HttpMessageConverter());
+                restTemplate.setMessageConverters(messageConverters);
+                //List<activityListViewModel> resultList = Arrays.asList(restTemplate.getForObject(url, activityListViewModel[].class));
+                GetAllActiviteRest greeting = restTemplate.getForObject(url, GetAllActiviteRest.class);
+                //Log.e("Worked!!!!!!!!!!! ", greeting);
+                return greeting;
+            } catch (Exception e) {
+                Log.e("didn't work!!!!!!!!!!", e.getMessage(), e);
             }
 
-            @Override
-            protected void onPostExecute(detailActiviteViewModel greeting) {
-                Log.e("MainActivity", greeting.getNom());
-                //TextView greetingIdText = (TextView) findViewById(R.id.id_value);
-                //TextView greetingContentText = (TextView) findViewById(R.id.content_value);
-                //greetingIdText.setText(greeting.getId());
-                //greetingContentText.setText(greeting.getContent());
-            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(GetAllActiviteRest greeting) {
+
+            //Log.e("MainActivity", greeting.toString());
+
+            //TextView greetingContentText = (TextView) findViewById(R.id.content_value);
+            //greetingIdText.setText(greeting.getId());
+            //greetingContentText.setText(greeting.getContent());
+
 
         }
+
+    }
     }
 
